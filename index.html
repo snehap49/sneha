@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pro1.css">
+</head>
+<body>
+    <div class = "headers">
+        <div class="col1">
+            <ul type="none">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </div>
+        <div class="col2">
+        
+        </div>
+    </div>
+
+    <div class="big">
+    <div class="body">
+    <form>
+        <div class="pp">
+            <label class="pp">Name</label>
+        <input class = "tt" type="text" id="name" name="sne" placeholder="Enter name">
+        </div>
+        
+        <br>
+       
+        <div class="pp">
+            <label class="pp">Phone</label>
+            <input class = "tt" id="phone" type="number" placeholder="Enter Number">
+        </div>
+
+        <br>
+
+        <div class="pp">
+            <label class="pp">EMail</label>
+            <input class = "tt" id="email" type="Mail_id" required>
+        </div>
+        
+        <br>
+
+        <div>
+            <label class="pp">Travel</label>
+            <input class = "check" type="checkbox" name="sne" value="Flight" ><label class="as">Flight</label>
+            <input class = "check" type="checkbox"Name="sne" value="bus" ><label class="as">Bus</label>
+            <input class = "check" type="checkbox"name="sne" value="Train"><label class="as">Train</label>
+        </div>
+        
+        <br>
+        
+        <div   class="button">
+        <button type="button" onclick="Submitdata()">Submit</button>
+        </div>
+        <script>
+            function Submitdata(){
+                let name = document.getElementById("names");
+            console.log(name);
+            console.log(name.value);
+            let finalname=name.value;
+            let email=document.getElementById("email");
+            console.log(email);
+            let finalemail=email.value;
+            console.log(email.value);   
+            let phone = document.getElementById("phone")
+            console.log(phone);
+            let finalphone=phone.value;
+            console.log(phone.value);
+            let checks = document.getElementsByClassName("sne");
+            console.log(checks);
+            let finalchecks=checks.value;
+            let arr = []
+            for (let val of checks) {
+                if (val.checked) {
+                    arr.push(val.value);
+                }
+            }
+            console.log(arr);
+
+            console.log(arr.join());
+
+            console.log(finalname);
+            console.log(finalemail);
+            console.log(finalphone);
+            console.log(finalchecks);
+            
+            
+        }
+        </Script>
+        
+
+    </form>
+</div>
+</div>
+</body>
+</html>
